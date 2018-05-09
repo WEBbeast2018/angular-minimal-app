@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-todo',
@@ -7,9 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
       todo! {{index}}
     </p>
   `,
-  styles: []
+  styles: [`
+    * {
+      color: red
+    }
+  `]
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent implements OnInit, OnDestroy {
   @Input() index;
   constructor() { }
 

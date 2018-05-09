@@ -8,7 +8,11 @@ import { Component } from '@angular/core';
         <button (click)="removeTodo()">clear todo</button>
     </main>
   `,
-    styles: []
+    styles: [`
+    * {
+      color: blue
+    }
+  `]
 })
 export class AppComponent {
     todoList = [1, 2, 3, 4];
